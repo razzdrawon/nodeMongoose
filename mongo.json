@@ -1,0 +1,44 @@
+
+db.estudiante.insertMany([
+    {nombre: "daniel",edad: 24,boleta: 201110283
+    },
+    {nombre: "rosali",edad: 24,boleta: 201110289
+    },
+    {nombre: "franco",edad: 24,boleta: 201110227
+    }
+]
+	
+)
+
+try{
+    db.estudiante.updateOne({
+        "nombre": "pepe"
+    },
+    {$set: {
+            "nombre": "Jose Ricardo"
+        }
+    }
+    );
+}catch(e){
+    print(e);
+}
+
+
+try{
+    db.estudiante.replaceOne(
+    {
+        "edad": 24
+    },
+    {
+        "nombre": 1234,
+        "edad": 26,
+        "boleta": "abcdefg"
+    }
+    );
+}catch(e){
+      print(e);
+}
+
+for(var i=1;i<=25;i++){
+    db.testData.insert({name:"pepe"+i,numero:i })
+}
