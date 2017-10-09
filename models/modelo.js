@@ -16,6 +16,10 @@ var ModeloSchema = new Schema(
                 unique: false,
                 dropDups: true
             }
+        },
+        id_marca:{
+            type: Schema.ObjectId, 
+            required:'Inserta una marca del modelo por favor.'
         }  
     },
     {

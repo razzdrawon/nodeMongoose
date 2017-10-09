@@ -38,8 +38,7 @@ var MarcaSchema = new Schema(
                 unique: false,
                 dropDups: true
             }
-        },
-        modelos: [Modelo.schema]
+        }
     },
     {
         timestamps: true

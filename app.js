@@ -10,14 +10,16 @@ var app = express()
 var apiAuto = require('./routes/auto')
 var apiMoto = require('./routes/moto')
 var apiMarca = require('./routes/marca')
+var apiModelo = require('./routes/modelo')
 
 app.use(bodyParser.urlencoded({extended:false}))
 app.use(bodyParser.json())
 
 //URL de la API
 app.use('/api', apiAuto),
+app.use('/api', apiMoto),
 app.use('/api', apiMarca),
-app.use('/api', apiMoto);
+app.use('/api', apiModelo);
 
 //Para utilizarlo en otros ficheros e importar
 module.exports = app;
