@@ -1,9 +1,9 @@
 'use strict'
 
 //Importamos express
-var express = require('express')
+var express = require('express');
 //Importamos el controlador
-var modeloController = require('../controllers/modelo')
+var modeloController = require('../controllers/modelo');
 
 //Instanciamos un objeto Roter
 var api = express.Router();

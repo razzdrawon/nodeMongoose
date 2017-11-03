@@ -2,10 +2,10 @@
 
 //Importamos app.js
 var app = require('./app');
-var database=require('./database');
+var database = require('./database');
 //Puerto de variable de entorno de produccion o uno especificado
-var port = process.env.PORT || 7070
+var port = process.env.PORT || 7070;
 
 app.listen(7070, function() {
-    console.log('Esto es un ejemplo de una API Puerto ' + port)
+    console.log('Esto es un ejemplo de una API en el puerto: ' + port);
 });
